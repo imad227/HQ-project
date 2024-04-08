@@ -10,7 +10,7 @@ public class ElfTest
     {
         string name = "Elf";
         Elf elf = new();
-        Assert.IsTrue(elf.SpelCaster);
+        Assert.IsTrue(elf.SpellCaster);
         Assert.AreEqual(elf.CharacterName,name);
     }
 }

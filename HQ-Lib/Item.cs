@@ -11,6 +11,9 @@ public class Item
     public int CurrentBodyModifier {get ; set;}
     public int MaxMindModifier { get; set; }
     public int CurrentMindModifier { get; set; }
+    public int GoldModifier { get; set; }
+    public bool Isequibt { get; set; }
+    public double Price {get; protected set;}
 
     public string WeaponDescription { get; set; } = string.Empty;
 }

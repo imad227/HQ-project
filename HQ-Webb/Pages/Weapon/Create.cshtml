@@ -1,0 +1,64 @@
+@page
+@model HQ_Webb.Pages_Weapon.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Weapon</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Weapon.Name" class="control-label"></label>
+                <input asp-for="Weapon.Name" class="form-control" />
+                <span asp-validation-for="Weapon.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weapon.AttackModifier" class="control-label"></label>
+                <input asp-for="Weapon.AttackModifier" class="form-control" />
+                <span asp-validation-for="Weapon.AttackModifier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weapon.DefenceModifier" class="control-label"></label>
+                <input asp-for="Weapon.DefenceModifier" class="form-control" />
+                <span asp-validation-for="Weapon.DefenceModifier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weapon.BodyModifier" class="control-label"></label>
+                <input asp-for="Weapon.BodyModifier" class="form-control" />
+                <span asp-validation-for="Weapon.BodyModifier" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Weapon.Isequibt" /> @Html.DisplayNameFor(model => model.Weapon.Isequibt)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weapon.Price" class="control-label"></label>
+                <input asp-for="Weapon.Price" class="form-control" />
+                <span asp-validation-for="Weapon.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weapon.WeaponDescription" class="control-label"></label>
+                <input asp-for="Weapon.WeaponDescription" class="form-control" />
+                <span asp-validation-for="Weapon.WeaponDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

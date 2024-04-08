@@ -1,0 +1,89 @@
+@page
+@model HQ_Webb.Pages_Item.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Item</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Item.IsSpell" /> @Html.DisplayNameFor(model => model.Item.IsSpell)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.Name" class="control-label"></label>
+                <input asp-for="Item.Name" class="form-control" />
+                <span asp-validation-for="Item.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.AttackModifier" class="control-label"></label>
+                <input asp-for="Item.AttackModifier" class="form-control" />
+                <span asp-validation-for="Item.AttackModifier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.DefenceModifier" class="control-label"></label>
+                <input asp-for="Item.DefenceModifier" class="form-control" />
+                <span asp-validation-for="Item.DefenceModifier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.MaxBodyModifier" class="control-label"></label>
+                <input asp-for="Item.MaxBodyModifier" class="form-control" />
+                <span asp-validation-for="Item.MaxBodyModifier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.CurrentBodyModifier" class="control-label"></label>
+                <input asp-for="Item.CurrentBodyModifier" class="form-control" />
+                <span asp-validation-for="Item.CurrentBodyModifier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.MaxMindModifier" class="control-label"></label>
+                <input asp-for="Item.MaxMindModifier" class="form-control" />
+                <span asp-validation-for="Item.MaxMindModifier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.CurrentMindModifier" class="control-label"></label>
+                <input asp-for="Item.CurrentMindModifier" class="form-control" />
+                <span asp-validation-for="Item.CurrentMindModifier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.GoldModifier" class="control-label"></label>
+                <input asp-for="Item.GoldModifier" class="form-control" />
+                <span asp-validation-for="Item.GoldModifier" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Item.Isequibt" /> @Html.DisplayNameFor(model => model.Item.Isequibt)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.Price" class="control-label"></label>
+                <input asp-for="Item.Price" class="form-control" />
+                <span asp-validation-for="Item.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item.WeaponDescription" class="control-label"></label>
+                <input asp-for="Item.WeaponDescription" class="form-control" />
+                <span asp-validation-for="Item.WeaponDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

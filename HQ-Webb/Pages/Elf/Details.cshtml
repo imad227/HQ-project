@@ -1,0 +1,79 @@
+@page
+@model HQ_Webb.Pages_Elf.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Elf</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elf.PlayerName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elf.PlayerName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elf.SpellCaster)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elf.SpellCaster)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elf.CharacterName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elf.CharacterName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elf.Attack)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elf.Attack)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elf.Defence)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elf.Defence)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elf.MaxBody)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elf.MaxBody)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elf.MaxMind)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elf.MaxMind)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elf.CurrentBody)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elf.CurrentBody)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elf.CurrentMind)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elf.CurrentMind)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Elf.Gold)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Elf.Gold)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Elf.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

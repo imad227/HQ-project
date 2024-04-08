@@ -1,9 +1,9 @@
 ﻿namespace HQ_Lib;
 
-public class Dwarf : Heroes
+public class Dwarf : Heroes, IPrintReport
 {
     public string PlayerName {get; set;} = string.Empty;
-    public bool SpelCaster { get; set; } = false;
+    public bool SpellCaster { get; set; } = false;
 
     public Dwarf() : base()
     {
@@ -14,5 +14,24 @@ public class Dwarf : Heroes
         MaxMind = 3;
         CurrentBody = MaxBody;
         CurrentMind = MaxMind;
+    }
+
+        public override bool EquibtItem(Item i)
+    {
+        if(i.IsSpell)
+        {
+            if(!SpellCaster)
+            {
+                return false;
+            }
+        }
+        return base.EquibtItem(i);
+    }
+
+    public string Report()
+    {
+        string s = string.Empty;
+        s += PlayerName + " " + (SpellCaster? "Is a Spellcaster": "") + "\n";
+        return s;
     }
 }

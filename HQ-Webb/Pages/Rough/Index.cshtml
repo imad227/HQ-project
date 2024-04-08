@@ -1,0 +1,90 @@
+@page
+@model HQ_Webb.Pages_Rough.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Rough[0].PlayerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rough[0].SpellCaster)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rough[0].CharacterName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rough[0].Attack)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rough[0].Defence)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rough[0].MaxBody)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rough[0].MaxMind)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rough[0].CurrentBody)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rough[0].CurrentMind)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rough[0].Gold)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Rough) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlayerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpellCaster)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CharacterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Attack)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Defence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxBody)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxMind)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentBody)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrentMind)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gold)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,79 @@
+@page
+@model HQ_Webb.Pages_Dwarf.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Dwarf</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Dwarf.PlayerName" class="control-label"></label>
+                <input asp-for="Dwarf.PlayerName" class="form-control" />
+                <span asp-validation-for="Dwarf.PlayerName" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Dwarf.SpellCaster" /> @Html.DisplayNameFor(model => model.Dwarf.SpellCaster)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dwarf.CharacterName" class="control-label"></label>
+                <input asp-for="Dwarf.CharacterName" class="form-control" />
+                <span asp-validation-for="Dwarf.CharacterName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dwarf.Attack" class="control-label"></label>
+                <input asp-for="Dwarf.Attack" class="form-control" />
+                <span asp-validation-for="Dwarf.Attack" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dwarf.Defence" class="control-label"></label>
+                <input asp-for="Dwarf.Defence" class="form-control" />
+                <span asp-validation-for="Dwarf.Defence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dwarf.MaxBody" class="control-label"></label>
+                <input asp-for="Dwarf.MaxBody" class="form-control" />
+                <span asp-validation-for="Dwarf.MaxBody" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dwarf.MaxMind" class="control-label"></label>
+                <input asp-for="Dwarf.MaxMind" class="form-control" />
+                <span asp-validation-for="Dwarf.MaxMind" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dwarf.CurrentBody" class="control-label"></label>
+                <input asp-for="Dwarf.CurrentBody" class="form-control" />
+                <span asp-validation-for="Dwarf.CurrentBody" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dwarf.CurrentMind" class="control-label"></label>
+                <input asp-for="Dwarf.CurrentMind" class="form-control" />
+                <span asp-validation-for="Dwarf.CurrentMind" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dwarf.Gold" class="control-label"></label>
+                <input asp-for="Dwarf.Gold" class="form-control" />
+                <span asp-validation-for="Dwarf.Gold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,79 @@
+@page
+@model HQ_Webb.Pages_Dwarf.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Dwarf</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dwarf.PlayerName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dwarf.PlayerName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dwarf.SpellCaster)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dwarf.SpellCaster)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dwarf.CharacterName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dwarf.CharacterName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dwarf.Attack)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dwarf.Attack)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dwarf.Defence)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dwarf.Defence)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dwarf.MaxBody)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dwarf.MaxBody)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dwarf.MaxMind)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dwarf.MaxMind)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dwarf.CurrentBody)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dwarf.CurrentBody)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dwarf.CurrentMind)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dwarf.CurrentMind)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dwarf.Gold)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dwarf.Gold)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Dwarf.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,79 @@
+@page
+@model HQ_Webb.Pages_Elf.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Elf</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Elf.PlayerName" class="control-label"></label>
+                <input asp-for="Elf.PlayerName" class="form-control" />
+                <span asp-validation-for="Elf.PlayerName" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Elf.SpellCaster" /> @Html.DisplayNameFor(model => model.Elf.SpellCaster)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elf.CharacterName" class="control-label"></label>
+                <input asp-for="Elf.CharacterName" class="form-control" />
+                <span asp-validation-for="Elf.CharacterName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elf.Attack" class="control-label"></label>
+                <input asp-for="Elf.Attack" class="form-control" />
+                <span asp-validation-for="Elf.Attack" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elf.Defence" class="control-label"></label>
+                <input asp-for="Elf.Defence" class="form-control" />
+                <span asp-validation-for="Elf.Defence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elf.MaxBody" class="control-label"></label>
+                <input asp-for="Elf.MaxBody" class="form-control" />
+                <span asp-validation-for="Elf.MaxBody" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elf.MaxMind" class="control-label"></label>
+                <input asp-for="Elf.MaxMind" class="form-control" />
+                <span asp-validation-for="Elf.MaxMind" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elf.CurrentBody" class="control-label"></label>
+                <input asp-for="Elf.CurrentBody" class="form-control" />
+                <span asp-validation-for="Elf.CurrentBody" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elf.CurrentMind" class="control-label"></label>
+                <input asp-for="Elf.CurrentMind" class="form-control" />
+                <span asp-validation-for="Elf.CurrentMind" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Elf.Gold" class="control-label"></label>
+                <input asp-for="Elf.Gold" class="form-control" />
+                <span asp-validation-for="Elf.Gold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

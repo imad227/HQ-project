@@ -1,0 +1,80 @@
+@page
+@model HQ_Webb.Pages_Barbarian.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Barbarian</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Barbarian.PlayerName" class="control-label"></label>
+                <input asp-for="Barbarian.PlayerName" class="form-control" />
+                <span asp-validation-for="Barbarian.PlayerName" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Barbarian.SpellCaster" /> @Html.DisplayNameFor(model => model.Barbarian.SpellCaster)
+                </label>
+            </div>
+            <input type="hidden" asp-for="Barbarian.Id" />
+            <div class="form-group">
+                <label asp-for="Barbarian.CharacterName" class="control-label"></label>
+                <input asp-for="Barbarian.CharacterName" class="form-control" />
+                <span asp-validation-for="Barbarian.CharacterName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Barbarian.Attack" class="control-label"></label>
+                <input asp-for="Barbarian.Attack" class="form-control" />
+                <span asp-validation-for="Barbarian.Attack" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Barbarian.Defence" class="control-label"></label>
+                <input asp-for="Barbarian.Defence" class="form-control" />
+                <span asp-validation-for="Barbarian.Defence" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Barbarian.MaxBody" class="control-label"></label>
+                <input asp-for="Barbarian.MaxBody" class="form-control" />
+                <span asp-validation-for="Barbarian.MaxBody" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Barbarian.MaxMind" class="control-label"></label>
+                <input asp-for="Barbarian.MaxMind" class="form-control" />
+                <span asp-validation-for="Barbarian.MaxMind" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Barbarian.CurrentBody" class="control-label"></label>
+                <input asp-for="Barbarian.CurrentBody" class="form-control" />
+                <span asp-validation-for="Barbarian.CurrentBody" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Barbarian.CurrentMind" class="control-label"></label>
+                <input asp-for="Barbarian.CurrentMind" class="form-control" />
+                <span asp-validation-for="Barbarian.CurrentMind" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Barbarian.Gold" class="control-label"></label>
+                <input asp-for="Barbarian.Gold" class="form-control" />
+                <span asp-validation-for="Barbarian.Gold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

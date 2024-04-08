@@ -1,0 +1,61 @@
+@page
+@model HQ_Webb.Pages_Weapon.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Weapon</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Weapon.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Weapon.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Weapon.AttackModifier)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Weapon.AttackModifier)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Weapon.DefenceModifier)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Weapon.DefenceModifier)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Weapon.BodyModifier)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Weapon.BodyModifier)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Weapon.Isequibt)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Weapon.Isequibt)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Weapon.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Weapon.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Weapon.WeaponDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Weapon.WeaponDescription)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Weapon.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

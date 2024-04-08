@@ -1,9 +1,9 @@
 ﻿namespace HQ_Lib;
 
-public class Elf : Heroes
+public class Elf : Heroes, IPrintReport
 {
     public string PlayerName {get; set;} = string.Empty;
-    public bool SpelCaster { get; set; } = true;
+    public bool SpellCaster { get; set; } = true;
 
     public Elf() : base()
     {
@@ -14,5 +14,17 @@ public class Elf : Heroes
         MaxMind = 4;
         CurrentBody = MaxBody;
         CurrentMind = MaxMind;
+    }
+
+    public override bool EquibtItem(Item i)
+    {
+        return base.EquibtItem(i);
+    }
+
+    public string Report()
+    {
+        string s = string.Empty;
+        s += PlayerName + " " + (SpellCaster? "Is a Spellcaster": "") + "\n";
+        return s;
     }
 }
