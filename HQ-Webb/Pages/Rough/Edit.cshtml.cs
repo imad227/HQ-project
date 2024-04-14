@@ -66,7 +66,7 @@ namespace HQ_Webb.Pages_Rough
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Heroes/Index");
         }
 
         private bool RoughExists(int id)

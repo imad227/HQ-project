@@ -35,10 +35,10 @@ namespace HQ_Webb.Pages_Rough
                 return Page();
             }
 
-            _context.Rough.Add(Rough);
+            _context.Heroes.Add(Rough);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Heroes/Index");
         }
     }
 }

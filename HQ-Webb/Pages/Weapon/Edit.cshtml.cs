@@ -66,7 +66,7 @@ namespace HQ_Webb.Pages_Weapon
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Heroes/Index");
         }
 
         private bool WeaponExists(int id)

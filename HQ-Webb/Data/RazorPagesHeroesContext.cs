@@ -21,5 +21,6 @@ namespace RazorPagesHeroes.Data
         public DbSet<HQ_Lib.Elf> Elf { get; set; } = default!;
         public DbSet<HQ_Lib.Dwarf> Dwarf { get; set; } = default!;
         public DbSet<HQ_Lib.Barbarian> Barbarian { get; set; } = default!;
+        public DbSet<HQ_Lib.Wizard> Wizard { get; set; } = default!;
     }
 }

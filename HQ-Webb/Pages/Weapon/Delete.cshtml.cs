@@ -57,7 +57,7 @@ namespace HQ_Webb.Pages_Weapon
                 await _context.SaveChangesAsync();
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Heroes/Index");
         }
     }
 }

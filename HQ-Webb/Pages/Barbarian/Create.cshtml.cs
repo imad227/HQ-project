@@ -35,10 +35,10 @@ namespace HQ_Webb.Pages_Barbarian
                 return Page();
             }
 
-            _context.Barbarian.Add(Barbarian);
+            _context.Heroes.Add(Barbarian);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Heroes/Index");
         }
     }
 }

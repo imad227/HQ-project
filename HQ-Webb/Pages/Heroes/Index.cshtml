@@ -2,14 +2,19 @@
 @model HQ_Webb.Pages_Heroes.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Heroes";
 }
 
-<h1>Index</h1>
+<h1>Our Band or Heroes</h1>
 
 <p>
+    <a asp-page="/Barbarian/Create">Create New Barbarian</a>
+    <a asp-page="/Dwarf/Create">Create New Dwarf</a>
+    <a asp-page="/Rough/Create">Create New Rough</a>
+    <a asp-page="/Wizard/Create">Create New Wizard</a>
     <a asp-page="Create">Create New</a>
 </p>
+
 <table class="table">
     <thead>
         <tr>
@@ -17,62 +22,145 @@
                 @Html.DisplayNameFor(model => model.Heroes[0].CharacterName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Heroes[0].Attack)
+                @Html.DisplayNameFor(model => model.Heroes[0].Attack) ⚔
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Heroes[0].Defence)
+                @Html.DisplayNameFor(model => model.Heroes[0].Defence) 🛡
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Heroes[0].MaxBody)
+                @Html.DisplayNameFor(model => model.Heroes[0].CurrentBody) 💊
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Heroes[0].MaxMind)
+                @Html.DisplayNameFor(model => model.Heroes[0].CurrentMind) 🎇
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Heroes[0].CurrentBody)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Heroes[0].CurrentMind)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Heroes[0].Gold)
+                @Html.DisplayNameFor(model => model.Heroes[0].Gold) 💰
             </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Heroes) {
+        @foreach (var item in Model.Heroes)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CharacterName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Attack)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Defence)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrentBody)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrentMind)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gold) 
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+<h3>Weapons</h3>
+
+<p>
+    <a asp-page="/Weapon/Create">Create New Weapon</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapon[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapon[0].Price) 💵
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weapon[0].WeaponDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Weapon) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.CharacterName)
+                @Html.DisplayFor(modelItem => item.Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Attack)
+                @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Defence)
+                @Html.DisplayFor(modelItem => item.WeaponDescription)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.MaxBody)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MaxMind)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CurrentBody)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CurrentMind)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gold)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-page="/Weapon/Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="/Weapon/Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="/Weapon/Delete" asp-route-id="@item.Id">Delete</a> |
+                <a asp-page="/Weapon/SendTo" asp-route-id="@item.Id">Send To</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+        
+<h3>Items</h3>
+
+<p>
+    <a asp-page="/Item/Create">Create New Item</a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Item[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item[0].Price) 💵
+                
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item[0].ItemDescription)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Item) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price) 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemDescription)
+            </td>
+            <td>
+                <a asp-page="/Item/Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="/Item/Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="/Item/Delete" asp-route-id="@item.Id">Delete</a> |
+                <a asp-page="/Item/SendTo" asp-route-id="@item.Id">Send To</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

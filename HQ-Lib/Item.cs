@@ -15,5 +15,5 @@ public class Item
     public bool Isequibt { get; set; }
     public double Price {get; protected set;}
 
-    public string WeaponDescription { get; set; } = string.Empty;
+    public string ItemDescription { get; set; } = string.Empty;
 }

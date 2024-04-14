@@ -66,7 +66,7 @@ namespace HQ_Webb.Pages_Elf
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Heroes/Index");
         }
 
         private bool ElfExists(int id)

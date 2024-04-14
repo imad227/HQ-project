@@ -38,7 +38,7 @@ namespace HQ_Webb.Pages_Item
             _context.Item.Add(Item);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Heroes/Index");
         }
     }
 }

@@ -92,6 +92,10 @@ namespace HQ_Webb.Migrations
                     b.Property<bool>("Isequibt")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("ItemDescription")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("MaxBodyModifier")
                         .HasColumnType("INTEGER");
 
@@ -104,10 +108,6 @@ namespace HQ_Webb.Migrations
 
                     b.Property<double>("Price")
                         .HasColumnType("REAL");
-
-                    b.Property<string>("WeaponDescription")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -236,6 +236,29 @@ namespace HQ_Webb.Migrations
                         });
 
                     b.HasDiscriminator().HasValue("Rough");
+                });
+
+            modelBuilder.Entity("HQ_Lib.Wizard", b =>
+                {
+                    b.HasBaseType("HQ_Lib.Heroes");
+
+                    b.Property<string>("PlayerName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("SpellCaster")
+                        .HasColumnType("INTEGER");
+
+                    b.ToTable("Heroes", t =>
+                        {
+                            t.Property("PlayerName")
+                                .HasColumnName("Wizard_PlayerName");
+
+                            t.Property("SpellCaster")
+                                .HasColumnName("Wizard_SpellCaster");
+                        });
+
+                    b.HasDiscriminator().HasValue("Wizard");
                 });
 
             modelBuilder.Entity("HQ_Lib.Item", b =>

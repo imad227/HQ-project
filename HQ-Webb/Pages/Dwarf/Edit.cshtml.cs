@@ -66,7 +66,7 @@ namespace HQ_Webb.Pages_Dwarf
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Heroes/Index");
         }
 
         private bool DwarfExists(int id)

@@ -1,0 +1,57 @@
+@page
+@model HQ_Webb.Pages_Weapon.SendToModel
+
+@{
+    ViewData["Title"] = "Send To:";
+}
+
+<h1>@Html.DisplayFor(model => model.Weapon.Name)</h1>
+
+<h4>Weapon</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Weapon.Id" />
+    using HQ_Lib;
+    using HQ_Lib;
+            <div class="form-group">
+                <label asp-for="Weapon.Name" class="control-label"></label>
+                <input asp-for="Weapon.Name" class="form-control" />
+                <span asp-validation-for="Weapon.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Weapon.Isequibt" /> @Html.DisplayNameFor(model => model.Weapon.Isequibt)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Weapon.WeaponDescription" class="control-label"></label>
+                <input asp-for="Weapon.WeaponDescription" class="form-control" />
+                <span asp-validation-for="Weapon.WeaponDescription" class="text-danger"></span>
+            </div>
+            <div>
+                <select id="SelectedHero1" name="SelectedHero1">
+                    <option> -- Select Hero -- </option>
+                    @foreach (var h in Model.Heroes )
+                    {
+                        <option>@Html.DisplayFor(modelitem => h.CharacterName)</option>
+                    }
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Send To" class="btn btn-primary" @Model.SelectedHero = SelectdHero1.id />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="/Heroes/Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -35,10 +35,10 @@ namespace HQ_Webb.Pages_Elf
                 return Page();
             }
 
-            _context.Elf.Add(Elf);
+            _context.Heroes.Add(Elf);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Heroes/Index");
         }
     }
 }

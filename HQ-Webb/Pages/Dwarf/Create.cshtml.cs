@@ -35,10 +35,10 @@ namespace HQ_Webb.Pages_Dwarf
                 return Page();
             }
 
-            _context.Dwarf.Add(Dwarf);
+            _context.Heroes.Add(Dwarf);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Heroes/Index");
         }
     }
 }

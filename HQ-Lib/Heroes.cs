@@ -1,4 +1,5 @@
-﻿using System.Reflection.PortableExecutable;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Reflection.PortableExecutable;
 using System.Runtime.CompilerServices;
 
 namespace HQ_Lib;
@@ -37,6 +38,12 @@ public class Heroes
     {
         weapons = new List<Weapon>();
         items = new List<Item>();
+    }
+
+
+    public virtual string Report()
+    {
+        return "Report:Heroes";
     }
 
     /// <summary>

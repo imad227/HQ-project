@@ -1,0 +1,79 @@
+@page
+@model HQ_Webb.Pages_Wizard.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Wizard</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wizard.PlayerName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wizard.PlayerName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wizard.SpellCaster)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wizard.SpellCaster)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wizard.CharacterName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wizard.CharacterName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wizard.Attack)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wizard.Attack)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wizard.Defence)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wizard.Defence)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wizard.MaxBody)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wizard.MaxBody)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wizard.MaxMind)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wizard.MaxMind)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wizard.CurrentBody)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wizard.CurrentBody)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wizard.CurrentMind)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wizard.CurrentMind)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Wizard.Gold)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Wizard.Gold)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Wizard.Id">Edit</a> |
+    <a asp-page="/Heroes/Index">Back to List</a>
+</div>

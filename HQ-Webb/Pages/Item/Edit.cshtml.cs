@@ -66,7 +66,7 @@ namespace HQ_Webb.Pages_Item
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("/Heroes/Index");
         }
 
         private bool ItemExists(int id)

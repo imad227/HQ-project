@@ -20,10 +20,14 @@ namespace HQ_Webb.Pages_Heroes
         }
 
         public IList<Heroes> Heroes { get;set; } = default!;
+        public IList<Item> Item { get;set; } = default!;
+        public IList<Weapon> Weapon { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
             Heroes = await _context.Heroes.ToListAsync();
+            Item = await _context.Item.ToListAsync();
+            Weapon = await _context.Weapon.ToListAsync();
         }
     }
 }

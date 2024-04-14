@@ -1,6 +1,6 @@
 ﻿namespace HQ_Lib;
 
-public class Wizard : Heroes, IPrintReport
+public class Wizard : Heroes
 {
     public string PlayerName {get; set;} = string.Empty;
     public bool SpellCaster { get; set; } = true;
@@ -21,7 +21,7 @@ public class Wizard : Heroes, IPrintReport
         return base.EquibtItem(i);
     }
 
-        public string Report()
+        public override string Report()
     {
         string s = string.Empty;
         s = $"{CharacterName} (played by: {PlayerName})";

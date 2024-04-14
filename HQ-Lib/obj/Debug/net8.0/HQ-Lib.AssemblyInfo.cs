@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HQ-Lib")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87656488b41e349b0a7ea60780df5a754333c521")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22555f39cac648d3495d4faeec925fea5122fcc7")]
 [assembly: System.Reflection.AssemblyProductAttribute("HQ-Lib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HQ-Lib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
